@@ -1,0 +1,42 @@
+/* Only parameters defined in BatchAgentModel.getInitParams() can be set here.
+A nice how-to on how to define these parameters here can be found at: 
+http://repast.sourceforge.net/repast_3/how-to/params.html */
+
+//Following version made to investigate behavior of simulation for Beyond Hooperville
+
+runs: 1
+group_size {
+	set_list: 50 100
+ 	{
+ 		runs: 1
+ 		s {
+ 			set_list: 0.02 0.05
+ 			{
+ 				runs: 1
+   				beta {
+     	 			set_list: 0.1 0.5 0.9
+ 					{
+ 						runs: 1
+						mu {
+							set_list: 0.1 0.5 0.9
+						}
+ 					}
+   				}
+ 			}
+		}
+	}
+}
+
+allAgents {
+	set: 200
+}
+
+experimentDuration {
+	set: 3
+}
+
+File_ID { //Run number, all output files contain this 
+	start: 1
+ 	end: 36
+ 	incr: 1
+}
