@@ -19,8 +19,8 @@ public class Constraints {
 		setAvailableTime(time);
 		setAvailableCalories(cals);
 
-		if (SpecializedAgent.ENFORCE_SEASON_CONSTRAINTS)
-			this.group = group;
+//		if (SpecializedAgent.ENFORCE_SEASON_CONSTRAINTS)
+//			this.group = group;
 	}
 
 	public Constraints() {	

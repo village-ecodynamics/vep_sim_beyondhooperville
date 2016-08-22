@@ -12,7 +12,7 @@ import java.util.zip.ZipInputStream;
 
 import com.mesaverde.groups.BeyondHooperAgent;
 //import com.mesaverde.groups.LearningHooperAgent;
-import com.mesaverde.specialization.SpecializedAgent;
+//import com.mesaverde.specialization.SpecializedAgent;
 
 public class Utilities {
 	public static void copyArray(double[] src, double[] dest, int len) {
@@ -27,8 +27,8 @@ public class Utilities {
 	public static Agent createAgent() {
 		if (Village.AGENT_TYPE == 0)
 			return new Agent();
-		if (Village.AGENT_TYPE == 1)
-			return new SpecializedAgent();
+//		if (Village.AGENT_TYPE == 1)
+//			return new SpecializedAgent();
 		if (Village.AGENT_TYPE == Village.HOOPER_AGENTS) {
 			//            if (Village.ENABLE_LEARNING_FOR_HOOPER)
 			//                return new LearningHooperAgent();

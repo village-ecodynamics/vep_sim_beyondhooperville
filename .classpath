@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="com/mesaverde/groups/BeyondGroupVisualization.java" kind="src" path="src"/>
+	<classpathentry excluding="com/mesaverde/groups/BeyondGroupVisualization.java|com/mesaverde/specialization/allocation/|com/mesaverde/specialization/tasks/|com/mesaverde/specialization/threads/|com/mesaverde/specialization/DOLCalculator.java|com/mesaverde/specialization/SpecializedAgent.java|com/mesaverde/specialization/ResourceManager.java|com/mesaverde/specialization/SocialTradeManager.java|com/mesaverde/specialization/SpecializedAgentModelSwarm.java|com/mesaverde/specialization/TradeManager.java|com/mesaverde/specialization/SpecializedBatchAgentModel.java|com/mesaverde/specialization/SpecializedObserverAgentModel.java" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/asm.jar"/>
 	<classpathentry kind="lib" path="lib/beanbowl.jar"/>
