@@ -1,0 +1,34 @@
+VEPI_data
+VEPI_data/**
+output
+bin
+
+**/VEPI_data
+**/output
+**/bin
+**/VEPI_data
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
