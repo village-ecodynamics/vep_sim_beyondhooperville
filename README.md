@@ -3,6 +3,8 @@ This repository contains the "BeyondHooperville" version of the Village Ecodynam
 
 Release version 3.0 of this code relates to *How to Make a Polity (in the central Mesa Verde region)*, a manuscript in press with *American Antiquity*. A full reference will be placed here upon publication.
 
+This work was funded by the National Science Foundation under grant nos. [DEB-0816400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=0816400), [BCS-0119981](http://www.nsf.gov/awardsearch/showAward?AWD_ID=0119981), and [DGE-1347973](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1347973). Public release of the source code was made possible by GitHub and the [Research Institute at Crow Canyon](http://www.crowcanyon.org/institute/).
+
 ### Compiling the Village source
 Development of the Village simulation by VEP developers has taken place using the Eclipse IDE. Here, we provide instructions on compiling the Village code from the command prompt, or from within Eclipse. Both require an up-to-date version for the Java SDK.
 
