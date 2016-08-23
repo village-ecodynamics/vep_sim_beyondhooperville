@@ -1,7 +1,7 @@
 # Installing and running the "Village" model
 This repository contains the "BeyondHooperville" version of the Village Ecodynamics Project agent based simulation, "Village". Village simulates human-environment interactions in an 1,817 km<sup>2</sup> portion of southwestern Colorado from AD 600–1300. In the simulation agents—representing ancestral Pueblo farm families—grow maize, hunt for deer, rabbit, and hare, raise turkeys, trade maize and protein, marry, have children, and in this latest version form complex corporate groups that compete against one another for arable land. Village is written in Java, and is built using the [RePAST Java (v3.1)](http://repast.sourceforge.net/repast_3/index.html) toolkit.
 
-** DRAFT Doxygen documentation of this code is available at []()**
+** DRAFT Doxygen documentation of this code is available at [https://crowcanyon.github.io/vep_sim_beyondhooperville/](https://crowcanyon.github.io/vep_sim_beyondhooperville/)**
 
 Release version 3.0 of this code relates to *How to Make a Polity (in the central Mesa Verde region)*, a manuscript in press with *American Antiquity*. A full reference will be placed here upon publication.
 
