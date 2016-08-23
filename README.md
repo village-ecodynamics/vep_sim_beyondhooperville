@@ -6,16 +6,24 @@ Release version 3.0 of this code relates to *How to Make a Polity (in the centra
 This work was funded by the National Science Foundation under grant nos. [DEB-0816400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=0816400), [BCS-0119981](http://www.nsf.gov/awardsearch/showAward?AWD_ID=0119981), and [DGE-1347973](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1347973). Public release of the source code was made possible by GitHub and the [Research Institute at Crow Canyon Archaeological Center](http://www.crowcanyon.org/institute/).
 
 ### Compiling the Village source
-Development of the Village simulation by VEP developers has taken place using the Eclipse IDE. Here, we provide instructions on compiling the Village code from the command prompt, or from within Eclipse. Both require an up-to-date version for the Java SDK.
+Development of the Village simulation by VEP developers has taken place using the Eclipse IDE. Here, we provide instructions on compiling the Village code from the command prompt, or from within Eclipse. Both require an up-to-date version for the Java SDK and the Git versioning system. Git is installed by default on Mac OS X; download Git for Windows [here](https://git-scm.com/download/win).
 
 #### Java command line
 The Village simulation requires Java SDK (Java SE 8), available [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Be sure to restart any browser you have open during installation. On OS X, the SDK should install to `/Library/Java/JavaVirtualMachines`. You can check your version of Java by opening up the Terminal (or "Command Prompt" in Windows) and typing `java -version`. The version listed should be `1.8.0_11` or higher. (See below for alternate instructions on how to install Java on a Mac.)
 
-To compile the Village code base, simply download this repository (perhaps using `git clone https://github.com/crowcanyon/vep_sim_beyondhooperville`), change into the `vep_sim_beyondhooperville` directory, and run the following:
+To compile the Village code base, simply download this repository (perhaps using `git clone https://github.com/crowcanyon/vep_sim_beyondhooperville`), change into the `vep_sim_beyondhooperville` directory, and run the following (on Unix-alike OSs):
 ```
 mkdir bin
 javac -cp src:lib/* -d bin $(find . -name "*.java")
 ```
+
+Or, run this on Windows (you may have to change your PATH environment variable to expose the `javac` command):
+```
+mkdir bin
+dir /s /B *.java > sources.txt
+javac -cp "./src;./lib/*;" -d bin @sources.txt
+```
+
 This will create a new directory (`bin`) in the `vep_sim_beyondhooperville` directory, and compile all `*.java` files into Java `*.class` files using the `javac` command. The `-cp src:lib/*` option tells the compiler where to find other Java libraries referenced by the Village source.
 
 #### Run a particular model
@@ -23,9 +31,13 @@ Once the Village source is compiled, you can run any of several version of the s
 - AgentModelSwarm — the "classic" version of the Village model, conforming to the *Emergence and Collapse of Early Villages* edited volume (a.k.a., the VEP I final report) and Kyle Bocinsky and Stefani Crabtree's masters theses.
 - BeyondHooperAgentModelSwarm — the latest version of the Village model, conforming to *How to make a polity*
 
-For example, to run the observer version of the BeyondHooperAgentModelSwarm simulation, change into the `vep_sim_beyondhooperville` directory, and run the following (after compiling):
+For example, to run the observer version of the BeyondHooperAgentModelSwarm simulation, change into the `vep_sim_beyondhooperville` directory, and run the following (after compiling, on Unix-alikes):
 ```
 java -cp bin:lib/* com.mesaverde.groups.BeyondHooperObserverAgentModel
+```
+or this (on Windows):
+```
+java -cp "./bin;./lib/*;" com.mesaverde.groups.BeyondHooperObserverAgentModel
 ```
 This uses the `java` command to run the `BeyondHooperObserverAgentModel` simulation, with the  `-cp bin:lib/*` option again telling the program where to find other Java libraries referenced by the Village code.
 
