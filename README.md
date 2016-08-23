@@ -1,5 +1,5 @@
 # Installing and running the "Village" model
-This repository contains the "BeyondHooperville" version of the Village Ecodynamics Project agent based simulation, "Village". Village simulates human-environment interactions in an 1,817 km<sup>2</sup> portion of southwestern Colorado over from AD 600–1300. In the simulation, agents—representing ancestral Pueblo farm families—farm maize, hunt for deer, rabbits, and hares, raise turkeys, trade maize and protein, marry, have children, and in this latest form complex corporate groups that compete against one another. Village is written in Java, and is built using the [RePAST Java (v3.1)](http://repast.sourceforge.net/repast_3/index.html) toolkit.
+This repository contains the "BeyondHooperville" version of the Village Ecodynamics Project agent based simulation, "Village". Village simulates human-environment interactions in an 1,817 km<sup>2</sup> portion of southwestern Colorado over from AD 600–1300. In the simulation, agents—representing ancestral Pueblo farm families—farm maize, hunt for deer, rabbits, and hares, raise turkeys, trade maize and protein, marry, have children, and in this latest version form complex corporate groups that compete against one another. Village is written in Java, and is built using the [RePAST Java (v3.1)](http://repast.sourceforge.net/repast_3/index.html) toolkit.
 
 Release version 3.0 of this code relates to *How to Make a Polity (in the central Mesa Verde region)*, a manuscript in press with *American Antiquity*. A full reference will be placed here upon publication.
 
@@ -22,6 +22,7 @@ Or, run this on Windows (you may have to change your PATH environment variable t
 mkdir bin
 dir /s /B *.java > sources.txt
 javac -cp "./src;./lib/*;" -d bin @sources.txt
+rm sources.txt
 ```
 
 This will create a new directory (`bin`) in the `vep_sim_beyondhooperville` directory, and compile all `*.java` files into Java `*.class` files using the `javac` command. The `-cp src:lib/*` option tells the compiler where to find other Java libraries referenced by the Village source.
