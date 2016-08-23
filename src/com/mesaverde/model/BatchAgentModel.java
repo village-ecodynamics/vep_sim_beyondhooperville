@@ -62,7 +62,7 @@ public class BatchAgentModel extends AgentModelSwarm {
         if (args.length > 0)        	
             init.loadModel(agentModelSwarm, args[0], true);
         else
-        	init.loadModel(agentModelSwarm, "./src/com/mesaverde/model/params.txt", true);  // DC: now we go to a parameter file if there are no args on command line invocation
+        	init.loadModel(agentModelSwarm, "params.txt", true);  // DC: now we go to a parameter file if there are no args on command line invocation
         init.setExitOnExit(true);      
 	}
 }
