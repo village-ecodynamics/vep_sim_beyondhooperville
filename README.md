@@ -1,20 +1,20 @@
 # Installing and running the "Village" model
-This repository contains the "BeyondHooperville" version of the Village Ecodynamics Project agent based simulation, "Village". Village simulates human-environment interactions in an 1,817 km<sup>2</sup> portion of southwestern Colorado from AD 600–1300. In the simulation agents—representing ancestral Pueblo farm families—grow maize, hunt for deer, rabbit, and hare, raise turkeys, trade maize and protein, marry, have children, and in this latest version form complex corporate groups that compete against one another for arable land. Village is written in Java, and is built using the [RePAST Java (v3.1)](http://repast.sourceforge.net/repast_3/index.html) toolkit.
+This repository contains the "BeyondHooperville" version of the Village Ecodynamics Project agent based simulation, "Village". Village simulates human-environment interactions in an 1,817 km<sup>2</sup> portion of southwestern Colorado from AD 600–1300. In the simulation agents—representing ancestral Pueblo farm families—grow maize, hunt for deer, rabbit, and hare, raise turkeys, trade maize and protein, marry, have children, and in this latest version form complex corporate groups that compete against one another for arable land. Village is written in Java, and is built using the [RePAST Java (v3.1)](http://repast.sourceforge.net/repast_3/index.html) toolkit. The RePAST libraries are included in this project, and do **not** need to be downloaded seperately.
 
 **DRAFT Doxygen documentation of this code is available [here](https://crowcanyon.github.io/vep_sim_beyondhooperville/).**
 
 Release version 3.0 of this code relates to *How to Make a Polity (in the central Mesa Verde region)*, a manuscript in press with *American Antiquity*. A full reference will be placed here upon publication.
 
 Crabtree, Stefani A., R. Kyle Bocinsky, Paul L. Hooper, Susan C. Ryan, and Timothy A. Kohler
-<br>2016 &emsp;&emsp; How to Make a Polity (in the central Mesa Verde region). *American Antiquity*.
+<br>**In press.** How to Make a Polity (in the central Mesa Verde region). *American Antiquity*.
 
 This work was funded by the National Science Foundation under grant nos. [DEB-0816400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=0816400), [BCS-0119981](http://www.nsf.gov/awardsearch/showAward?AWD_ID=0119981), and [DGE-1347973](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1347973). Public release of the source code was made possible by GitHub and the [Research Institute at Crow Canyon Archaeological Center](http://www.crowcanyon.org/institute/).
 
 ### Compiling the Village source
-Development of the Village simulation by VEP developers has taken place using the Eclipse IDE. Here, we provide instructions on compiling the Village code from the command prompt, or from within Eclipse. Both require an up-to-date version for the Java SDK and the Git versioning system. Git is installed by default on Mac OS X; download Git for Windows [here](https://git-scm.com/download/win).
+Development of the Village simulation by VEP developers has taken place using the Eclipse IDE. Here, we provide instructions on compiling the Village code from the command prompt, or from within Eclipse. Both require an up-to-date version for the Java SDK and the Git versioning system. Git is installed by default on Mac OS X; download Git for Windows [here](https://git-scm.com/download/win), and accept all default values during the installation. (A basic overview of common git tasks is provided in the **Installing, cloning, and running in Eclipse IDE** section below.)
 
 #### Java command line
-The Village simulation requires Java SDK (Java SE 8), available [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Be sure to restart any browser you have open during installation. On OS X, the SDK should install to `/Library/Java/JavaVirtualMachines`. You can check your version of Java by opening up the Terminal (or "Command Prompt" in Windows) and typing `java -version`. The version listed should be `1.8.0_11` or higher. (See below for alternate instructions on how to install Java on a Mac.)
+The Village simulation requires Java SDK (Java SE 8), available [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Download the Java Development Kit (JDK) for your operating system. Be sure to restart any browser you have open during installation. On OS X, the SDK should install to `/Library/Java/JavaVirtualMachines`. You can check your version of Java by opening up the Terminal (or "Command Prompt" in Windows) and typing `java -version`. The version listed should be `1.8.0_11` or higher. (See below for alternate instructions on how to install Java on a Mac.)
 
 To compile the Village code base, simply download this repository (perhaps using `git clone https://github.com/crowcanyon/vep_sim_beyondhooperville`), change into the `vep_sim_beyondhooperville` directory, and run the following (on Unix-alike OSs):
 ```
@@ -27,13 +27,13 @@ Or, run this on Windows (you may have to change your PATH environment variable t
 mkdir bin
 dir /s /B *.java > sources.txt
 javac -cp "./src;./lib/*;" -d bin @sources.txt
-rm sources.txt
+del sources.txt
 ```
 
 This will create a new directory (`bin`) in the `vep_sim_beyondhooperville` directory, and compile all `*.java` files into Java `*.class` files using the `javac` command. The `-cp src:lib/*` option tells the compiler where to find other Java libraries referenced by the Village source.
 
 #### Run a particular model
-Once the Village source is compiled, you can run any of several version of the simulation, in either "observer" mode (i.e., with the RePAST graphical user interface) or in "batch" mode, which reads parameters from a text file and can be used to sweep over parameter values. There are two primary versions:
+Once the Village source is compiled, you can run any of several versions of the simulation, in either "observer" mode (i.e., with the RePAST graphical user interface) or in "batch" mode, which reads parameters from a text file and can be used to sweep over parameter values. There are two primary versions:
 - AgentModelSwarm — the "classic" version of the Village model, conforming to the *Emergence and Collapse of Early Villages* edited volume (a.k.a., the VEP I final report) and Kyle Bocinsky and Stefani Crabtree's masters theses.
 - BeyondHooperAgentModelSwarm — the latest version of the Village model, conforming to *How to make a polity*
 
@@ -50,6 +50,10 @@ This uses the `java` command to run the `BeyondHooperObserverAgentModel` simulat
 Alternatively, you can run the batch version:
 ```
 java -cp bin:lib/* com.mesaverde.groups.BeyondHooperBatchAgentModel
+```
+or this (on Windows):
+```
+java -cp "./bin;./lib/*;" com.mesaverde.groups.BeyondHooperBatchAgentModel
 ```
 which will begin running the code in the terminal.
 
@@ -81,20 +85,24 @@ In the upper-right section of the window, select the Java perspective (the littl
 #### Run a particular model
 As above, you have the same options for running various versions of the Village simulation, except here Eclipse handles all of the compilation for you. To run a model, click the triangle next to the project to expand it, then right-click the "src" directory and select "Run As" → "Java Application". Eclipse will search the code for available versions; simply select the version you want to run and click "OK".
 
+You can run any of several versions of the simulation, in either "observer" mode (i.e., with the RePAST graphical user interface) or in "batch" mode, which reads parameters from a text file and can be used to sweep over parameter values. There are two primary versions:
+- AgentModelSwarm — the "classic" version of the Village model, conforming to the *Emergence and Collapse of Early Villages* edited volume (a.k.a., the VEP I final report) and Kyle Bocinsky and Stefani Crabtree's masters theses.
+- BeyondHooperAgentModelSwarm — the latest version of the Village model, conforming to *How to make a polity*
+
 ### Common Git tasks within Eclipse
 As stated above, the Git versioning system is very similar to the Subversion system. A team developer “clones” a remote repository into a local Git repository, works in their local repository by “committing” changes to it, “pulls” remote changes and merges them into their local repository, and “pushes” their local changes onto the remote repository. Here, we’ll briefly overview how to accomplish each of these tasks from within the Java task view in Eclipse. It is assumed that you have already created a local clone of the Git repository and created a project in your workspace.
 
 #### “Pulling” updates from the remote repository
 “Pulling”—synonymous with “Updating” in Subversion—gets changes from a remote repository and adds them to your local repository. Any conflicts between changes you have made and those others have pushed to the remote repository will need to be dealt with when pulling.
 
-To pull from the remote repository, simply right-click or CTRL-click the project name in the Java task view and select Team → Pull from the pop-up menu. A window will appear that will tell you the status of your pull request, and whether any changes have been made to your local clone.
+To pull from the remote repository, simply right-click or CTRL-click the project name in the Java task view (in the package explorer pane) and select Team → Pull from the pop-up menu. A window will appear that will tell you the status of your pull request, and whether any changes have been made to your local clone.
 
 #### “Committing” to your local repository
 Unlike Subversion, “Committing” in Git refers to adding code changes to the local clone of your repository. Thus, you can track local versioning (and revert to them if need-be) during personal code development, and only subject your team members to your code once it is debugged; this is the appropriate way to go about developing code in a Git repository.
 
-To commit to your local repository, simply right-click or CTRL-click the project name in the Java task view and select Team → Commit from the pop-up menu. A window will appear asking you to give some comments describing what you are committing. Finally, click “Commit” to commit your changes to the local repository. There is also an option to “Commit and Push” your changes to the remote repository. Please use it sparingly.
+To commit to your local repository, simply right-click or CTRL-click the project name in the Java task view (in the package explorer pane) and select Team → Commit from the pop-up menu. A window will appear asking you to give some comments describing what you are committing. Finally, click “Commit” to commit your changes to the local repository. There is also an option to “Commit and Push” your changes to the remote repository. Please use it sparingly.
 
 #### “Pushing” to the remote repository
 Once the code in your local repository is stable and ready to be shared with your teammates, you may “push” it onto the remote Git repository.
 
-To push your local changes to the remote repository, right-click or CTRL-click the project name in the Java task view and select Team → Push Upstream from the pop-up menu. Your changes will be pushed to the remote repository. Note that if you have not committed your changes to your local repository, none of the changes will be pushed to the remote repository.
+To push your local changes to the remote repository, right-click or CTRL-click the project name in the Java task view (in the package explorer pane) and select Team → Push Upstream from the pop-up menu. Your changes will be pushed to the remote repository. Note that if you have not committed your changes to your local repository, none of the changes will be pushed to the remote repository.

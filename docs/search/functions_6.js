@@ -16,7 +16,7 @@ var searchData=
   ['getgroups',['getGroups',['../classcom_1_1mesaverde_1_1groups_1_1_beyond_hooper_master.html#a3435c8e9d43fc0a44616d85a7ecc41d3',1,'com::mesaverde::groups::BeyondHooperMaster']]],
   ['gethooper2',['getHooper2',['../classcom_1_1mesaverde_1_1groups_1_1_beyond_hooper_agent_model_swarm.html#a959fd3aefec8efdd57d8bf844ee2515a',1,'com::mesaverde::groups::BeyondHooperAgentModelSwarm']]],
   ['getid',['getID',['../classcom_1_1mesaverde_1_1groups_1_1_beyond_group.html#afd7779c2bf7f6d71ef059a2e0fe714ab',1,'com::mesaverde::groups::BeyondGroup']]],
-  ['getintamount',['getIntAmount',['../classcom_1_1mesaverde_1_1hunting_1_1_animal_tracker.html#a83fc993dc64e48b5d99dfd1791d93077',1,'com::mesaverde::hunting::AnimalTracker']]],
+  ['getintamount',['getIntAmount',['../classcom_1_1mesaverde_1_1hunting_1_1_animal_tracker.html#a26a596da1eb8774fdb405f3c2fd0dc87',1,'com::mesaverde::hunting::AnimalTracker']]],
   ['getleader',['getLeader',['../classcom_1_1mesaverde_1_1groups_1_1_beyond_hooper_agent.html#a0adc61ffcc8daebc35e85932e6cf92b7',1,'com::mesaverde::groups::BeyondHooperAgent']]],
   ['getlock',['getLock',['../classcom_1_1mesaverde_1_1village_1_1_deer_cell.html#aa09917d3177d1eabe4f43e92c7b9c97c',1,'com::mesaverde::village::DeerCell']]],
   ['getmembers',['getMembers',['../classcom_1_1mesaverde_1_1groups_1_1_beyond_group.html#a80cc8671ebc54530bfa868c662e14334',1,'com::mesaverde::groups::BeyondGroup']]],
