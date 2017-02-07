@@ -3,10 +3,10 @@ This repository contains the "BeyondHooperville" version of the Village Ecodynam
 
 **DRAFT Doxygen documentation of this code is available [here](https://crowcanyon.github.io/vep_sim_beyondhooperville/).**
 
-Release version 3.0 of this code relates to *How to Make a Polity (in the central Mesa Verde region)*, a manuscript in press with *American Antiquity*. A full reference will be placed here upon publication.
+Release version 3.0 of this code relates to *How to Make a Polity (in the central Mesa Verde region)*:
 
 Crabtree, Stefani A., R. Kyle Bocinsky, Paul L. Hooper, Susan C. Ryan, and Timothy A. Kohler
-<br>**In press.** How to Make a Polity (in the central Mesa Verde region). *American Antiquity*.
+<br>2017. How to Make a Polity (in the central Mesa Verde region). *American Antiquity* 82(1):71--95.
 
 This work was funded by the National Science Foundation under grant nos. [DEB-0816400](http://www.nsf.gov/awardsearch/showAward?AWD_ID=0816400), [BCS-0119981](http://www.nsf.gov/awardsearch/showAward?AWD_ID=0119981), and [DGE-1347973](http://www.nsf.gov/awardsearch/showAward?AWD_ID=1347973). Public release of the source code was made possible by GitHub and the [Research Institute at Crow Canyon Archaeological Center](http://www.crowcanyon.org/institute/).
 
