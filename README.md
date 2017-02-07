@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/66307478.svg)](https://zenodo.org/badge/latestdoi/66307478)
+
 # Installing and running the "Village" model
 This repository contains the "BeyondHooperville" version of the Village Ecodynamics Project agent based simulation, "Village". Village simulates human-environment interactions in an 1,817 km<sup>2</sup> portion of southwestern Colorado from AD 600–1300. In the simulation agents—representing ancestral Pueblo farm families—grow maize, hunt for deer, rabbit, and hare, raise turkeys, trade maize and protein, marry, have children, and in this latest version form complex corporate groups that compete against one another for arable land. Village is written in Java, and is built using the [RePAST Java (v3.1)](http://repast.sourceforge.net/repast_3/index.html) toolkit. The RePAST libraries are included in this project, and do **not** need to be downloaded seperately.
 
