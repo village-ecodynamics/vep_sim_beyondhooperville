@@ -3101,7 +3101,7 @@ public class Cell implements Drawable, CustomProbeable {
 		}
 
 		if (wtime > 905 && wtime < Village.PIYEAR) {
-			if (settlerSet.size() > 0) {
+			if (settlerSet.size() > 0 && getSiteProx1() > 0) {
 				occuAnnum++;
 				occupied = occupied + settlerSet.size();
 				occuprox = occupied / getSiteProx1();
@@ -3114,7 +3114,7 @@ public class Cell implements Drawable, CustomProbeable {
 			occuprox1 = occuprox;
 		}
 		if (wtime > Village.PIYEAR && wtime < Village.PIIYEAR) {
-			if (settlerSet.size() > 0) {
+			if (settlerSet.size() > 0 && getSiteProx2() > 0) {
 				occuAnnum++;
 				occupied = occupied + settlerSet.size();
 				occuprox = occupied / getSiteProx2();
@@ -3127,7 +3127,7 @@ public class Cell implements Drawable, CustomProbeable {
 			occuprox2 = occuprox;
 		}
 		if (wtime > Village.PIIYEAR && wtime < Village.PIIIYEAR) {
-			if (settlerSet.size() > 0) {
+			if (settlerSet.size() > 0 && getSiteProx3() > 0) {
 				occuAnnum++;
 				occupied = occupied + settlerSet.size();
 				occuprox = occupied / getSiteProx3();
