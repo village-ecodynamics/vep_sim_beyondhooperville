@@ -21,7 +21,7 @@ The Village simulation requires Java SDK (Java SE 8), available [here](http://ww
 To compile the Village code base, simply download this repository (perhaps using `git clone https://github.com/crowcanyon/vep_sim_beyondhooperville`), change into the `vep_sim_beyondhooperville` directory, and run the following (on Unix-alike OSs):
 ```
 mkdir bin
-javac -cp src:lib/* -d bin $(find . -name "*.java")
+javac -cp "src:lib/*" -d bin $(find . -name "*.java")
 ```
 
 Or, run this on Windows (you may have to change your PATH environment variable to expose the `javac` command):
@@ -32,7 +32,7 @@ javac -cp "./src;./lib/*;" -d bin @sources.txt
 del sources.txt
 ```
 
-This will create a new directory (`bin`) in the `vep_sim_beyondhooperville` directory, and compile all `*.java` files into Java `*.class` files using the `javac` command. The `-cp src:lib/*` option tells the compiler where to find other Java libraries referenced by the Village source.
+This will create a new directory (`bin`) in the `vep_sim_beyondhooperville` directory, and compile all `*.java` files into Java `*.class` files using the `javac` command. The `-cp "src:lib/*"` option tells the compiler where to find other Java libraries referenced by the Village source.
 
 #### Run a particular model
 Once the Village source is compiled, you can run any of several versions of the simulation, in either "observer" mode (i.e., with the RePAST graphical user interface) or in "batch" mode, which reads parameters from a text file and can be used to sweep over parameter values. There are two primary versions:
@@ -41,7 +41,7 @@ Once the Village source is compiled, you can run any of several versions of the 
 
 For example, to run the observer version of the BeyondHooperAgentModelSwarm simulation, change into the `vep_sim_beyondhooperville` directory, and run the following (after compiling, on Unix-alikes):
 ```
-java -cp bin:lib/* com.mesaverde.groups.BeyondHooperObserverAgentModel
+java -cp "bin:lib/*" com.mesaverde.groups.BeyondHooperObserverAgentModel
 ```
 or this (on Windows):
 ```
@@ -51,7 +51,7 @@ This uses the `java` command to run the `BeyondHooperObserverAgentModel` simulat
 
 Alternatively, you can run the batch version:
 ```
-java -cp bin:lib/* com.mesaverde.groups.BeyondHooperBatchAgentModel
+java -cp "bin:lib/*" com.mesaverde.groups.BeyondHooperBatchAgentModel
 ```
 or this (on Windows):
 ```
@@ -71,7 +71,8 @@ Double click the installer, and select "Eclipse IDE for Java Developers" when pr
 Alternatively, on a Mac we suggest using Homebrew:
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew cask install java eclipse-java
+brew install java
+brew cask install eclipse-java
 ```
 Select a working directory as above.
 
