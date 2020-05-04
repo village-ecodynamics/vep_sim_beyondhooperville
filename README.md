@@ -16,7 +16,7 @@ This work was funded by the National Science Foundation under grant nos. [DEB-08
 Development of the Village simulation by VEP developers has taken place using the Eclipse IDE. Here, we provide instructions on compiling the Village code from the command prompt, or from within Eclipse. Both require an up-to-date version for the Java SDK and the Git versioning system. Git is installed by default on Mac OS X; download Git for Windows [here](https://git-scm.com/download/win), and accept all default values during the installation. (A basic overview of common git tasks is provided in the **Installing, cloning, and running in Eclipse IDE** section below.)
 
 #### Java command line
-The Village simulation requires Java SDK (Java SE 8), available [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Download the Java Development Kit (JDK) for your operating system. Be sure to restart any browser you have open during installation. On OS X, the SDK should install to `/Library/Java/JavaVirtualMachines`. You can check your version of Java by opening up the Terminal (or "Command Prompt" in Windows) and typing `java -version`. The version listed should be `1.8.0_11` or higher. (See below for alternate instructions on how to install Java on a Mac.)
+The Village simulation requires Java SDK, available [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Download the Java Development Kit ("Oracle JDK") for your operating system. Be sure to restart any browser you have open during installation. On OS X, the SDK should install to `/Library/Java/JavaVirtualMachines`. You can check your version of Java by opening up the Terminal (or "Command Prompt" in Windows) and typing `java -version`. The version listed should be `1.8.0_11` or higher. (See below for alternate instructions on how to install the Open Java JDK on a Mac.)
 
 To compile the Village code base, simply download this repository (perhaps using `git clone https://github.com/crowcanyon/vep_sim_beyondhooperville`), change into the `vep_sim_beyondhooperville` directory, and run the following (on Unix-alike OSs):
 ```
@@ -68,7 +68,7 @@ We recommend downloading the latest version of the Eclipse IDE ("Neon" or newer)
 
 Double click the installer, and select "Eclipse IDE for Java Developers" when prompted. Do *not* select "Eclipse IDE for Java EE Developers"! Install to a reasonable place on the hard drive—we suggest the `~/Applications` folder on a Mac. Start the Eclipse IDE by double-clicking the `Eclipse.app` (or `Eclipse.exe`) icon in the newly-created Eclipse directory. The Eclipse IDE should start. You will be prompted to supply a working directory. The default is fine here, unless you have been developing code in a working directory elsewhere.
 
-Alternatively, on a Mac we suggest using Homebrew:
+Alternatively, on MacOS we suggest using Homebrew:
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install java
@@ -77,7 +77,7 @@ brew cask install eclipse-java
 Select a working directory as above.
 
 #### Cloning this repository
-The first time you open Eclipse, a large welcome panel open. Close it by clicking the X nect to "Welcome" at the upper-left of the window. A Git repository explorer come installed by default with Eclipse. To access the Git Repositories control panel (called a “Perspective” in Eclipse), from the menu bar, select Window → Perspective → Open Perspective → Other. . . and select “Git”.
+The first time you open Eclipse, a large welcome panel open. Close it by clicking the X next to "Welcome" at the upper-left of the window. A Git repository explorer come installed by default with Eclipse. To access the Git Repositories control panel (called a “Perspective” in Eclipse), from the menu bar, select Window → Perspective → Open Perspective → Other. . . and select “Git”.
 
 Developing in a Git repository should seem familiar to SVN users, though there are some subtle differences. Like SVN, Git repositories implement a two-tiered versioning system. A developer first “clones” a shared project or branch of a project, then makes changes to their local clone by “committing” them to that clone. The developer can at any time “pull” changes from the shared repository down to their local clone. Once their local version is ready to be shared, they can “push” their local changes to the shared repository, where they will supersede the version on the repository or be merged with changes other developers have pushed since creating their own clones. All users can clone this repository; only VEP developers have "push" permissions.
 
